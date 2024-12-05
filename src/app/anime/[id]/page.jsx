@@ -49,11 +49,13 @@ const Page = async ({ params: { id } }) => {
             <p className="text-justify text-md">{anime.data.synopsis}</p>
 
         </div>
-        <div className="px-4 py-2 mb-2">
-            <h3 className="text-color-primary text-xl mt-3">Visitor comments :</h3>
-            <CommentBox anime_mal_id={id}/>
-            { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title}/> } 
-        </div>
+       {/* 
+         <div className="px-4 py-2 mb-2">
+           <h3 className="text-color-primary text-xl mt-3">Visitor comments :</h3>
+             <CommentBox anime_mal_id={id}/>
+         { user && <CommentInput anime_mal_id={id} user_email={user?.email} username={user?.name} anime_title={anime.data.title}/> }
+            </div> 
+         */}
         <div>
             <VideoPlayer youtubeId={anime.data.trailer.youtube_id}/>
         </div>
