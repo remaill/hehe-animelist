@@ -31,7 +31,6 @@ const Page = async ({ params: { id } }) => {
     />
   )}
 */}
-anime_title={anime.data.title}/>}
         </div>
         <div className="pt-4 px-4 flex gap-2 text-color-primary overflow-x-auto">
             <div className="text-sm w-36 p-1 flex flex-col justify-center items-center rounded border border-color-primary">
