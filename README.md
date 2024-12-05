@@ -1,1 +1,4 @@
 Proyek AnimeList saya menggunakan Next.js adalah inisiatif pembelajaran. Tujuannya adalah untuk menggunakan API dan database MySQL dengan Prisma sebagai ORM. Melalui proyek ini, saya belajar tentang pengelolaan data dan integrasi backend.
+
+*note!
+fitur login sudah tidak bisa di gunakan karena server database yg sudah expired
