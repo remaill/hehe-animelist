@@ -1,23 +1,37 @@
 import { getAnimeResponse } from "@/app/libs/api-libs"
 import Image from "next/image"
 import VideoPlayer from "@/app/components/utilits/VideoPlayer"
+{/*
 import CollectionButton from "@/app/components/Animelist/CollectionButton"
 import { authUsersession } from "@/app/libs/auth-libs"
 import prisma from "@/app/libs/prisma"
 import CommentInput from "@/app/components/Animelist/CommentInput"
 import CommentBox from "@/app/components/Animelist/CommentBox"
+*/}
 
 const Page = async ({ params: { id } }) => {
    const anime = await getAnimeResponse(`anime/${id}`)
+   {/*
    const user = await authUsersession()
    const collection = await prisma.collection.findFirst({
         where: { user_email: user?.email, anime_mal_id: id }
    })
+   */}
     return (
         <>
         <div className="pt-4 px-4">
         <h3 className="text-2xl text-color-primary">{anime.data.title} - {anime.data.year}</h3>
-        {!collection && user && <CollectionButton anime_mal_id={id} user_email={user?.email} anime_image={anime.data.images.webp.image_url} anime_title={anime.data.title}/>}
+        {/*
+  {!collection && user && (
+    <CollectionButton 
+      anime_mal_id={id} 
+      user_email={user?.email} 
+      anime_image={anime.data.images.webp.image_url} 
+      anime_title={anime.data.title} 
+    />
+  )}
+*/}
+anime_title={anime.data.title}/>}
         </div>
         <div className="pt-4 px-4 flex gap-2 text-color-primary overflow-x-auto">
             <div className="text-sm w-36 p-1 flex flex-col justify-center items-center rounded border border-color-primary">
